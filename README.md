@@ -76,6 +76,64 @@
 
 ---
 
+## 🚀 Instalación y Puesta en Marcha
+
+### Prerrequisitos
+
+Asegúrate de contar con las siguientes herramientas instaladas:
+* [Node.js](https://nodejs.org/) (versión 18 o superior recomendada)
+* [pnpm](https://pnpm.io/) (recomendado) o [npm](https://www.npmjs.com/)
+
+---
+
+### Pasos de Instalación
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd RD.Plast
+   ```
+
+2. **Instalar dependencias:**
+   ```bash
+   pnpm install
+   # o utilizando npm:
+   # npm install
+   ```
+
+3. **Configurar las variables de entorno:**
+   Copia el archivo `.env.example` y renómbralo a `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   Luego edita `.env` con las credenciales de tu proyecto de Supabase:
+   ```env
+   VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
+   VITE_SUPABASE_ANON_KEY=tu_supabase_anon_key
+   ```
+
+4. **Base de datos (Supabase):**
+   Si estás configurando un nuevo proyecto de Supabase, puedes ejecutar las sentencias SQL provistas en [supabase_assets_schema.sql](file:///c:/Code/RD.Plast/supabase_assets_schema.sql) dentro del SQL Editor de Supabase para generar el esquema de tablas y políticas necesarias.
+
+5. **Iniciar el servidor de desarrollo:**
+   ```bash
+   pnpm dev
+   # o con npm:
+   # npm run dev
+   ```
+   La aplicación se iniciará por defecto en `http://localhost:5173`.
+
+---
+
+### 📦 Scripts Disponibles
+
+* `pnpm dev`: Inicia el servidor de desarrollo con Vite.
+* `pnpm build`: Compila TypeScript y genera el bundle optimizado para producción en `dist/`.
+* `pnpm preview`: Previsualiza localmente el build de producción.
+* `pnpm lint`: Ejecuta el linter (Oxlint) para análisis de código.
+
+---
+
 <div align="center">
   <p><i>Desarrollado para RD Plast — Fábrica de Bolsas</i></p>
 </div>
